@@ -1,18 +1,14 @@
-import sys
-
-ip = sys.stdin.readline
-S = ip()
-P = ip()
+S = input()
+P = input()
 start = 0
 result = 0
-while len(S) !=1:
-  for i in range(len(S)):
-    if S[0:i] in P:
-      continue
-    else:
-      print(i)
-      S = S[i - 1:len(S)]
-      result += 1
-      break
-print("finish")
+while len(P) != 0:
+    if P in S:
+        result += 1
+        break
+    for i in range(len(P)):
+        if (P[0:i+1] in S) and not (P[0:i+2] in S):
+            result += 1
+            P = P[i+1:]
+            break
 print(result)
