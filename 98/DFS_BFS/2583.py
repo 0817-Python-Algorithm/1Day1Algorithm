@@ -9,7 +9,6 @@ square = [[False] * m for _ in range(n)]
 def tint(coordinate):
     for i in range(coordinate[0], coordinate[2]):
         for j in range(coordinate[1], coordinate[3]):
-            print(i, j)
             square[i][j] = True
 
 
