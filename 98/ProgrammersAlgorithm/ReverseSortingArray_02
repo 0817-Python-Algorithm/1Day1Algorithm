@@ -1,0 +1,7 @@
+def solution(arr):
+    newArr = list(set(arr)) #set으로 중복없도록 만들고 list로 변환
+    newArr.sort(reverse = True)
+    return newArr
+
+arr = [1,5,77,32,10,9]
+print(solution(arr))
