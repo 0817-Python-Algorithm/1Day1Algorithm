@@ -42,3 +42,27 @@ def solution(answers):
 
 print(solution([1,2,3,4,5]))
 print(solution([1,3,2,4,2]))
+
+
+# 정답 패턴을 미리 배열로 만들고 그 길이로 % 연산을 해서 넘치지 않게 활용하는 풀이 방법
+def solution2(answers):
+    answer_patterns = [[1,2,3,4,5],[2,1,2,3,2,4,2,5],[3,3,1,1,2,2,4,4,5,5]]
+    answer_count = [0] * 3
+    max_answer_count = -1
+    ans = []
+    
+    # i for문이 길이가 3이기에 이중 for문이어도 시간 복잡도가 O(N)
+    for i in range(3):
+        for j, answer in enumerate(answers):
+            if answer == answer_patterns[i][j % len(answer_patterns[i])]:
+                answer_count[i] += 1
+        if max_answer_count < answer_count[i]:
+            max_answer_count = answer_count[i]
+            ans = [i+1]
+        elif max_answer_count == answer_count[i]:
+            ans.append(i+1)
+    return ans
+
+
+print(solution2([1,2,3,4,5]))
+print(solution2([1,3,2,4,2]))
