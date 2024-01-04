@@ -2,7 +2,11 @@
 
 def solution(arr1, arr2):
     
-    answer = [[0 for i in range(len(arr2[0]))] for i in range(len(arr1))]
+    # 이젼 방식의 이차원 배열 생성코드
+    # answer = [[0 for i in range(len(arr2[0]))] for i in range(len(arr1))]
+    
+    # [0]을 곱셈 연산으로 한 행을 만들고 for문으로 여러 행을 생성
+    answer = [[0] * len(arr2[0]) for _ in range(len(arr1))]
     
     # 예를 들어 4X3 * 3*5 이런 방식일 때,
     # 가운데에 오는 3을 calculate_time으로 둠
