@@ -37,11 +37,11 @@ def solution(s):
                 push(stack, c)
             elif isEmpty(stack):
                 break
-            elif c == ')' and stack[top(stack)] == '(':
+            elif c == ')' and stack[-1] == '(': # stack[-1]을 쓰면 stack의 길이를 몰라도 끝값을 가져올 수 있음.
                 pop(stack)
-            elif c == '}' and stack[top(stack)] == '{':
+            elif c == '}' and stack[-1] == '{':
                 pop(stack)
-            elif c == ']' and stack[top(stack)] == '[':
+            elif c == ']' and stack[-1] == '[':
                 pop(stack)
             else:
                 break
