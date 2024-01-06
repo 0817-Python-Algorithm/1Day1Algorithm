@@ -30,15 +30,18 @@ def solution(s):
     for start_index in range(length):
         stack = []
         for index in range(length):
-            if arr[(index+start_index)%length] == '(' or arr[(index+start_index)%length] == '{' or arr[(index+start_index)%length] == '[':
-                push(stack, arr[(index+start_index)%length])
+
+            c = arr[(index+start_index)%length]
+
+            if c == '(' or c == '{' or c == '[':
+                push(stack, c)
             elif isEmpty(stack):
                 break
-            elif arr[(index+start_index)%length] == ')' and stack[top(stack)] == '(':
+            elif c == ')' and stack[top(stack)] == '(':
                 pop(stack)
-            elif arr[(index+start_index)%length] == '}' and stack[top(stack)] == '{':
+            elif c == '}' and stack[top(stack)] == '{':
                 pop(stack)
-            elif arr[(index+start_index)%length] == ']' and stack[top(stack)] == '[':
+            elif c == ']' and stack[top(stack)] == '[':
                 pop(stack)
             else:
                 break
