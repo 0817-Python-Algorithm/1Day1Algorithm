@@ -78,5 +78,8 @@ def solution(lst, search_lst):
 
     return answer
 
+# 여기서 시간 복잡도는 N개를 빈 트리에 삽입할 때 평균 O(NlogN), 최악 O(N^2)만큼 걸림.
+# 탐색은 O(M*N)이므로 최종적으로 O(N*(M+N)) -> O(N^2)임.
+
 print(solution([5,3,8,4,2,1,7,10], [1,2,5,6]))
 print(solution([1,3,5,7,9], [2,4,6,8,10]))
