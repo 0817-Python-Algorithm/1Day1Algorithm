@@ -9,6 +9,9 @@ def solution(maps):
     way = [[INF]* (M+1) for _ in range(N+1)]
     way2 = [[INF] * (M+1) for _ in range(N+1)]
 
+    result1 = INF
+    result2 = INF
+
     dx = [1,-1,0,0]
     dy = [0,0,1,-1]
 
@@ -47,6 +50,9 @@ def solution(maps):
             # 만약 해당 위치가 location에서 이동해서 가는 경우보다 값이 크면 업데이트하고 non_visit에 추가
             if way[x][y] > way[location[0]][location[1]] + 1:
                 way[x][y] = way[location[0]][location[1]] + 1
+                if [x,y] == lever:
+                    result1 = way[x][y]
+                    
                 non_visit.append([x,y])
 
 
@@ -69,12 +75,16 @@ def solution(maps):
                 continue
             if way2[x][y] > way2[location[0]][location[1]] + 1:
                 way2[x][y] = way2[location[0]][location[1]] + 1
+                if [x,y] == end:
+                    result2 = way2[x][y]
+
                 non_visit.append([x,y])
+
 
     if not way[lever[0]][lever[1]] < INF or not way2[end[0]][end[1]] < INF:
         return -1
     else:
-        return way[lever[0]][lever[1]] + way2[end[0]][end[1]]
+        return result1 + result2
     
 
 # 솔직히 이 문제 무척 고민도 많이 하고 오래 걸려 푼 문제임.
