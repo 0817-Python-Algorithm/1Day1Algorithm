@@ -16,8 +16,7 @@ var basket = [Int](0...N)
 for _ in 0..<M {
     let ij = readLine()!.split(separator: " ").map { Int($0)! }
     let i = basket[ij[0]]
-    basket[ij[0]] = basket[ij[1]]
-    basket[ij[1]] = i
+    basket.swapAt(ij[0], ij[1])
 }
 
 print(basket[1...N].map { String($0) }.joined(separator: " "))
