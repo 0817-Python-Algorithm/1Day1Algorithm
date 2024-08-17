@@ -2,7 +2,7 @@
 //  BOJ_10810.swift
 //  SwiftAlgorithm
 //
-//  Created by 윤동주 on 8/22/24.
+//  Created by 윤동주 on 8/20/24.
 //
 
 import Foundation
