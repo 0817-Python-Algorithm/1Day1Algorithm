@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		08086DEE2C7617BF0054E464 /* BOJ_25314.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08086DED2C7617BF0054E464 /* BOJ_25314.swift */; };
+		08086DF52C7655620054E464 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08086DF42C7655620054E464 /* main.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -24,6 +24,8 @@
 
 /* Begin PBXFileReference section */
 		08086DED2C7617BF0054E464 /* BOJ_25314.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BOJ_25314.swift; sourceTree = "<group>"; };
+		08086DF12C7648DA0054E464 /* BOJ_10810.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BOJ_10810.swift; sourceTree = "<group>"; };
+		08086DF42C7655620054E464 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		08D876962C760C3000E90996 /* SwiftAlgorithm */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = SwiftAlgorithm; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -44,6 +46,15 @@
 				08086DED2C7617BF0054E464 /* BOJ_25314.swift */,
 			);
 			path = LoopingStatement;
+			sourceTree = "<group>";
+		};
+		08086DF02C7648B40054E464 /* SingleArray */ = {
+			isa = PBXGroup;
+			children = (
+				08086DF12C7648DA0054E464 /* BOJ_10810.swift */,
+				08086DF42C7655620054E464 /* main.swift */,
+			);
+			path = SingleArray;
 			sourceTree = "<group>";
 		};
 		08D8768D2C760C3000E90996 = {
@@ -73,6 +84,7 @@
 		08D876A02C760D4900E90996 /* BOJ */ = {
 			isa = PBXGroup;
 			children = (
+				08086DF02C7648B40054E464 /* SingleArray */,
 				08086DEF2C7646A60054E464 /* LoopingStatement */,
 			);
 			path = BOJ;
@@ -137,7 +149,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				08086DEE2C7617BF0054E464 /* BOJ_25314.swift in Sources */,
+				08086DF52C7655620054E464 /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
